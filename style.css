@@ -98,37 +98,52 @@ dialog.dialog .button:hover{
 	font-family: "Lato", sans-serif;
 }
 .logo{
-	width:120px;
-	height:50px;
+	width:110px;
+	height:45px;
 }
 .top_row{
+	width: 100%;
 	font-size: 13px;
-	line-height: 3.5em;
+	line-height: 3.6em;
 	padding-left: 45px;
 	padding-right: 45px;
 }
 .bottom_row{
+	width: 100%;
 	padding-left: 45px;
 	font-size: 18px;
-	background-color: #0C0C3B;
+	background-color: #051438;
 	line-height: 2em;
 }
 .top_links .link{
 	color: black;
-	margin-left: 28px;}
+	margin-left: 28px;
+}
 .bottom_links .link{
+	padding: 7 15px;
 	color: white;
-	margin-right: 35px;
+	margin-right: 50px;
 	text-transform: uppercase;
+	font-weight: 500;
+}
+.bottom_links ul li{
+	display: inline-block;
+	padding: 5px;
+}
+.bottom_links ul li a{
+	border-radius: 8px;
+	padding: 7px 13px;
+	font-weight: 600;
 }
 .link.firsttop{
 	margin-left: 0px;
 }
-.top_links a:hover, button:hover{
+div.bottom_links ul li a:hover{
+  background:#071c4d;
+  transition: .4s;
+ }
+ .top_links a:hover, button:hover{
 	text-decoration: underline;
-}
-.bottom_links a:hover{
-	color: #A52A2A;
 }
 /*footer*/
 footer{
@@ -162,14 +177,14 @@ p.subp{
 	font-size: 20px;
 }
 .footer-logo{
-	background-color: #0C0C3B;
+	background-color: #051438;
 	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 10px;	
+	padding-top: 5px;
+	padding-bottom: 5px; 	
 }
 .footer-logo img{
 	max-height: 250px;
-	width: 100%;
+	width: 40%;
 	padding-left:45px;
 	padding-right: 45px;  
 }
