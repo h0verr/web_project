@@ -6,32 +6,98 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://kit.fontawesome.com/2d89f7dc6b.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<header>
 		<!--Верхняя строка шапки-->
 		<div class="row_header">
 			<div class="top_row">
-					<a href="index.html" class="link_logo"><img class="logo" src="https://i.pinimg.com/564x/da/82/08/da820870f7050f35111ddd85eb3a01f3.jpg"></a>			<!--Ссылка на index-->
+					<a href="index.html"><img class="logo" src="https://i.pinimg.com/564x/da/82/08/da820870f7050f35111ddd85eb3a01f3.jpg"></a>			<!--Ссылка на index-->
 				<div class="top_links">
-						<a class="link firsttop" href="#"><i class="far fa-question-circle"></i>Help</a>			<!--Ссылка на help-->
-						<a class="link" href="#"><i class="fas fa-hand-holding-usd"></i>Gift cards</a>		<!--Ссылка на купоны-->			
+					<nav>						
+						<a class="link firsttop" href="#"><i class="far fa-question-circle"></i>Help</a>		
+						<a class="link" href="#"><i class="fas fa-hand-holding-usd"></i>Gift cards</a>				
 						<i class="fas fa-ellipsis-v link"></i>
-						<a class="link" href="#"><i class="fas fa-user"></i>Sign in</a>			<!--Ссылка на авторизацию-->	
+						<button class="link dialog_buttons" id='login'><i class="fas fa-user"></i>Sign in</button>
+        				<button class="link dialog_buttons" id="updateDetails"><i class="fas fa-user-plus"></i>Sing up</button>
+					</nav>	
 				</div>
 			</div>
 			<div class="clear"></div>
 		<!--Нижняя строка шапки-->
 			<div class="bottom_row">
 				<div class="bottom_links">
+					<nav>
 						<a class="link" href="#">Men</a>						<!--Ссылка MEN-->								
 						<a class="link" href="#">Women</a>						<!--Ссылка WOMEN-->
 						<a class="link" href="#">Kids</a>						<!--Ссылка Kids-->
 						<a class="link" href="#">Bags</a>						<!--bags-->
+					</nav>														
 				</div>
 			</div>
 	</div>
 	</header>
+	<main>
+		<div class="fixed">
+	<dialog class="dialog" id="favDialog">
+        <form method="dialog">
+            <div>
+                <p>
+                    <div id="favAnimal">
+                    	<div>
+                    		<img src="https://probrendi.ru/wp-content/uploads/2018/10/USPA-logo-a.png">
+                    	</div>
+                        <div>
+                            <input id="item" type="text" placeholder="Email Adress" required>
+                            <label for="mail">E-mail</label>
+                        </div>
+                        <div>
+                            <input type="password" id='password' placeholder="Password" data-rule="password" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <div>
+                            <input type="text" id="phone" placeholder="Phone number" data-rule="number" required>
+                            <label for="phone"> Phone number</label>
+                        </div>
+                    </div>
+                </p>
+            </div>
+            <menu>
+                <button style="margin-left:150px" id="cancel1" type="reset">Cancel</button>
+                <button type="submit" id="lS" onclick="dtr()">Confirm</button>
+            </menu>
+        </form> 
+ 	</dialog>
+    <dialog class="dialog" id="loginIn">
+        <form method="dialog">
+            <div>
+                <p>
+                    <div id="regist">
+                    	<div>
+                    		<img src="https://probrendi.ru/wp-content/uploads/2018/10/USPA-logo-a.png">
+                    	</div>
+                        <div>
+                            <input type='text' id="eMail" placeholder="Email Adress" data-rule="email" required>
+                            <label for="eMail">E-mail</label>
+                        </div>
+                        <div>
+                            <input type="password" id='password2' placeholder="Password" data-rule="password" required>
+                            <label for="password2">Password</label>
+                        </div>
+                    </div>
+                </p>
+            </div>
+            <menu>
+                <button style="margin-left:150px" id="cancel2" type="reset">Cancel</button>
+                <button type="submit" onclick="myFunction2()">Confirm</button>
+            </menu>
+        </form>
+    </dialog>
+    </div>
+        <script src="script.js"></script>
+    <script src="script2.js"></script>
+		<div style="height:500px;"></div>
 	</main>
 	<footer>
 		<div class="footer-logo">
@@ -50,33 +116,39 @@
 			<p class="subp">*See <strong>Details</strong> for terms, product exclusions, and our financial incentive terms. See <strong>Privacy Policy</strong> for our privacy practices.</p>		
 		</div>
 		<div id="griditm1" class="info grid-footer-itm">
-			<p class="info">QUICK LINKS</p>
-			<a href="#">Returns & Exchanges</a><br>
-			<a href="#">Track Order</a><br>
-			<a href="#">Payments Accepted</a><br>
-			<a href="#">Find a Store</a><br>
-			<a href="#">Student Discount</a><br>
-			<a href="#">Affiliate Program</a><br>
-			<a href="#">Military Discount</a><br>
-			<a href="#">U.S. Polo Assn. Promo Codes</a><br>
-			<a href="#">Teacher Discount</a><br>
+			<nav>
+				<p class="info">QUICK LINKS</p>
+				<a href="#">Returns & Exchanges</a><br>
+				<a href="#">Track Order</a><br>
+				<a href="#">Payments Accepted</a><br>
+				<a href="#">Find a Store</a><br>
+				<a href="#">Student Discount</a><br>
+				<a href="#">Affiliate Program</a><br>
+				<a href="#">Military Discount</a><br>
+				<a href="#">U.S. Polo Assn. Promo Codes</a><br>
+				<a href="#">Teacher Discount</a><br>
+			</nav>
 		</div>
 		<div id="griditm2" class="info grid-footer-itm">
-			<p class="info">SUPPORT</p>
-			<a href="#">Help</a><br>
-			<a href="#">Contact</a><br>
-			<a href="#">Feedback</a><br>
-			<a href="#">Unsubscribe</a><br>
+			<nav>
+				<p class="info">SUPPORT</p>
+				<a href="#">Help</a><br>
+				<a href="#">Contact</a><br>
+				<a href="#">Feedback</a><br>
+				<a href="#">Unsubscribe</a><br>
+			</nav>
 		</div>
 		<div id="griditm3" class="info grid-footer-itm">
-			<p class="info">COMPANY</p>
-			<a href="#">About us</a><br>
-			<a href="#">Careers </a><br>
-			<a href="#">Privacy Policy</a><br>
-			<a href="#">Terms of Use</a><br>
-			<a href="#">CA Do Not Sell My Info</a><br>
-			<a href="#">Our Values</a><br>
-			<a href="#">Events </a><br>
+			<nav>
+				<p class="info">COMPANY</p>
+				<a href="#">About us</a><br>
+				<a href="#">Careers </a><br>
+				<a href="#">Privacy Policy</a><br>
+				<a href="#">Terms of Use</a><br>
+				<a href="#">CA Do Not Sell My Info</a><br>
+				<a href="#">Our Values</a><br>
+				<a href="#">Events </a><br>
+			</nav>
 		</div>
 		<div class="sm grid-footer-itm">
 			<a href="https://twitter.com/uspoloassn"><i class="fab fa-twitter"></i></a>
