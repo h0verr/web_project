@@ -46,16 +46,56 @@ h3{
 header{
 	z-index:0;
 }
-l4g2e.w/ffef
+dialog.dialog div{
+	margin: 10px 10px 0px 10px;
+}
+.dialog_buttons{
+	background-color: rgb(220, 220, 220);
+}
+.fixed{
+	z-index:0;
+}
+dialog.dialog img{
+	width: 120px;
+	height: 100px;
+	margin-left: 120px;
+}
+dialog.dialog{
+	border: 1px solid #0C0C3B;
+	border-radius: 15px;
+	box-shadow: 2px 2px 2px gray;
+	position: fixed;
+  	z-index: 9999;
+	margin: 0 auto;
+	height:300px;
+	width: 420px;
+	color: #0C0C3B;
+}
+dialog.dialog input{
+	font-size: 17px;
+	padding: 2px 2px;
+	border: 0.4px solid #0C0C3B;
+	border-radius: 3px;
+}
+dialog.dialog button{
+		margin-top: 35px;
+		background-color: #0C0C3B;
+		color: white;
+		height: 35px;
+		width: 110px;
+		border-radius: 5px;
+		text-decoration: none;
+}
+dialog.dialog .button:hover{
+ 	color:#0C0C3B;
+ 	background-color: white;
+}
 .row_header{
 	width: 100%;
 	position: fixed;
   	z-index: 9999;
-	background-color: rgb(220, 220, 220);
+	background-color: rgb(220, 220, 220);;
 	font-family: "Lato", sans-serif;
-}
-.link_logo{
-
 }
 .logo{
 	width:120px;
@@ -75,7 +115,7 @@ l4g2e.w/ffef
 }
 .top_links .link{
 	color: black;
-	margin-left: 35px;}
+	margin-left: 28px;}
 .bottom_links .link{
 	color: white;
 	margin-right: 35px;
@@ -84,7 +124,7 @@ l4g2e.w/ffef
 .link.firsttop{
 	margin-left: 0px;
 }
-.top_links a:hover{
+.top_links a:hover, button:hover{
 	text-decoration: underline;
 }
 .bottom_links a:hover{
