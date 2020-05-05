@@ -1,22 +1,23 @@
-function myFunction2() {
+function singIn() {
     var x;
     x = document.getElementById('eMail').value;
     let z = /([a-zA-Z0-9]+)([\.{1}])?([a-zA-Z0-9]+)\@gmail([\.])com$/g.test(x);
-    try {
-        if (!z) throw "please enter to the gmail post";
+    if (!z) {
+        alert('please enter to the right email');
+        return false
     }
-    catch (err) {
-        alert("Input " + err);
+    else {
+        alert('Welcome' + ' ' + x + '');
     }
     let pswr = document.querySelector('#password2').value;
     let test = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g.test(pswr);
-    try {
-        if (!test) throw "please enter to the right password";
+    if (!test) {
+        alert('please enter to the right password');
+        return false;
     }
-    catch (err) {
-        alert("Input " + err);
-    }
+
 }
+
 /*function emailValidation() {
     var email = document.querySelectorAll('input[data-rule]');
     for (let input of email) {
