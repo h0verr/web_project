@@ -25,22 +25,33 @@ function myFunction() {
     x = document.getElementById('item').value;
     let z = /([a-zA-Z0-9]+)([\.{1}])?([a-zA-Z0-9]+)\@gmail([\.])com$/g.test(x);
     if (!z) {
-        alert(" please enter to the gmail post");
         return false;
     }
     let pswr = document.querySelector('#password').value;
     let test = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g.test(pswr);
     if (!test) {
-        alert("please enter to the gmail post");
         return false;
     }
     let phone = document.querySelector('#phone').value;
     let test2 = /(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/g.test(phone);
     if (!test2) {
-        alert("please enter to the gmail post");
         return false;
     }
 }
+const input = document.getElementById('item');
+var price = document.querySelector('#password');
+var phoneNumber = document.getElementById("phone");
+let itemsArray = []
+localStorage.setItem(price.value, JSON.stringify(itemsArray))
+const data = JSON.parse(localStorage.getItem(price.value))
+function myFunction1() {
+    itemsArray.push(input.value);
+    localStorage.setItem(price.value, JSON.stringify(itemsArray));
+    input.value = '';
+    price.value = '';
+    phoneNumber.value = '';
+}
+/*
 function dtr() {
     const input = document.getElementById('item');
     let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
@@ -70,7 +81,7 @@ function dtr() {
     myFunction1();
     myFunction2();
     myFunction3();
-}
+}*/
 /*function emailValidation() {
     var email = document.querySelectorAll('input[data-rule]');
     for (let input of email) {
