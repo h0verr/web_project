@@ -9,7 +9,41 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
+
 <body>
+	<style>
+		div.scrollup {
+			position: fixed;
+			/* фиксированная позиция */
+			color: #fff;
+			/* цвет текста */
+			background-color: #286090;
+			/* цвет заднего фона */
+			right: 20px;
+			/* расстояние от правого края */
+			bottom: 0px;
+			/* расстояние от нижнего края */
+			padding: 4px 10px;
+			/* отступы до содержимого блока */
+			font-size: 20px;
+			/* размер шрифта (иконки) */
+			border-top-left-radius: 4px;
+			/* скругление верхнего левого угла */
+			border-top-right-radius: 4px;
+			/* скругление верхнего правого угла */
+			cursor: pointer;
+			/* форма курсора */
+			display: none;
+			/* не отображать элемент */
+			text-align: center;
+			/*выравнивание содержимого элемента по центру */
+		}
+
+		div.scrollup:hover {
+			background-color: black;
+			/* цвет заднего фона при наведении */
+		}
+	</style>
 	<header>
 		<div class="row_header">
 			<div class="top_row">
@@ -138,6 +172,7 @@
 									<img src="https://probrendi.ru/wp-content/uploads/2018/10/USPA-logo-a.png">
 								</div>
 								<div class="margin">
+								<div>
 									<input id="item" type="text" placeholder="Email Adress" required
 										title="PLease fill out this field. Use special symbols, big and small characters and numbers">
 									<label for="mail">E-mail</label>
@@ -170,6 +205,7 @@
 									<img src="https://probrendi.ru/wp-content/uploads/2018/10/USPA-logo-a.png">
 								</div>
 								<div class="margin">
+								<div>
 									<input type='text' id="eMail" placeholder="Email Adress" data-rule="email" required
 										title="PLease fill out this field. Use special symbols, big and small characters and numbers">
 									<label for="eMail">E-mail</label>
@@ -283,5 +319,7 @@
 			}
 		});
 	</script>
+
 </body>
+
 </html>
