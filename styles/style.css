@@ -77,18 +77,18 @@ dialog.dialog input{
 	border: 0.4px solid #0C0C3B;
 	border-radius: 3px;
 }
-dialog.dialog button{
+dialog.dialog button.dialogbtn{
 		margin-top: 35px;
-		background-color: #0C0C3B;
-		color: white;
+		background-color: #051438;
+		color:#e3e3e3;
 		height: 35px;
 		width: 110px;
 		border-radius: 5px;
 		text-decoration: none;
 }
-dialog.dialog .button:hover{
- 	color:#0C0C3B;
- 	background-color: white;
+dialog.dialog button.dialogbtn:hover{
+  	background:#071c4d;
+  	transition: .4s;
 }
 .row_header{
 	width: 100%;
@@ -117,14 +117,22 @@ dialog.dialog .button:hover{
 }
 .top_links .link{
 	color: black;
-	margin-left: 28px;
+	margin-left: 18px;
+	padding: 5px 7px;
+	border-radius: 5px;
+}
+.top_links .link:hover{
+	background-color: #f0f0f0;
+	transition: .4s;
+	text-decoration: none;
+
 }
 .bottom_links .link{
 	padding: 7 15px;
 	color:#e3e3e3;
 	margin-right: 25px;
-	text-transform: uppercase;
 	font-weight: 500;
+	text-transform: uppercase;
 }
 .bottom_links ul li{
 	display: inline-block;
