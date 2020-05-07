@@ -47,7 +47,7 @@ function myFunction() {
         myFunction1();
     }
 }
-const input = document.getElementById('item');
+.*const input = document.getElementById('item');
 var price = document.querySelector('#password');
 var phoneNumber = document.getElementById("phone");
 let itemsArray = []
