@@ -38,6 +38,7 @@ function singIn() {
             return false;
         }
     }
+    //sdsdsadsadsadaa
 
 /*function emailValidation() {
     var email = document.querySelectorAll('input[data-rule]');
