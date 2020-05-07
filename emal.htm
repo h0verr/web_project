@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" id="email">
+    <input type="password" id="password">
+    <input type="text" id='test'>
+    <input type="button" onclick="myFunc()" id="inputIn">
+    <script>
+        /*var inputLogin;
+        document.addEventListener('DOMContentLoaded', () => {            // при готовности объектной модели (когда все элементы документа созданы)
+            inputLogin = document.getElementById('userName');              // выбираем из документа элемент инпута
+            inputLogin.value = localStorage.getItem('savedLogin') || '';   // присваиваем его значению сохраненное в localStorage, либо пустую строку (при отсутствии сохр. знач.) 
+            let rememberIcon = document.getElementById('remember_icon');   // выбираем элемент, который у нас будет реагировать на клик 
+            rememberIcon.addEventListener('click', () => {                 // добавляем ему слушателя события "клик"... 
+                localStorage.setItem('savedLogin', inputLogin.value);        // ...при котором, в localStorage будет добавлена/изменена запись с именем "savedLogin" и значением элемента inputLogin (на момент события)
+            });
+        });
+        onclick="myFunction1()"*/
+        const email = document.getElementById('email');
+        var password = document.querySelector('#password');
+        var newAnimal;
+        var mas = [];
+        function save() {
+            newAnimal = document.getElementById("test").value// находим и записываем в переменную значение первого элемента input в документе
+            mas.unshift(newAnimal);
+        }
+        function myFunc() {
+            let itemsArr = [];
+            itemsArr.push(email.value);
+            localStorage.setItem(password.value, JSON.stringify(itemsArr));
+            email.value = '';
+            password.value = '';
+            itemsArr.shift(email.value);
+            save();
+            if (mas[newAnimal] == itemsArr[email]) {
+                alert('Hey motherfuker');
+            } else {
+                alert('govno');
+                return false;
+            }
+            //console.log(key, ':', localStorage.getItem(key))
+            /*const L = localStorage; for (let k, v, i = 0; i < L.length; i++) {
+                k = L.key(i); try { v = JSON.parse(L.getItem(k)).name } catch (e) { }; console.log(k, ' => ', v)
+            }*/
+        }
+        /*
+        const input = document.getElementById('item');
+        var price = document.querySelector('#password');
+        function myFunction1() {
+            let itemsArray = [];
+            //localStorage.setItem(price.value, JSON.stringify(itemsArray));
+            //const data = JSON.parse(localStorage.getItem(price.value));
+            itemsArray.push(input.value);
+            localStorage.setItem(price.value, JSON.stringify(itemsArray));
+            input.value = '';
+            price.value = '';
+            itemsArray.shift(input.value);
+            JSON.parse(localStorage.getItem(price.value));
+
+        };*/
+        /*const input = document.getElementById('item');
+        let pks = document.getElementById('password');
+        let itemsArray = localStorage.getItem(pks.value) ? JSON.parse(localStorage.getItem(pks.value)) : [];
+        localStorage.setItem(pks.value, JSON.stringify(itemsArray));
+        function myFunction1() {
+            itemsArray.push(input.value);
+            localStorage.setItem(pks.value, JSON.stringify(itemsArray));
+            input.value = ''
+        }*/
+        /*const input = document.getElementById('item');
+        let itemsArray = [];
+        localStorage.setItem('items', JSON.stringify(itemsArray));
+        const data = JSON.parse(localStorage.getItem('items'));
+        var a = document.querySelector('#inputIn');
+        a.onclick = function () {
+            var $textfild = document.querySelector('#item').value;
+            var $userPass = document.querySelector("#password").value;
+            itemsArray.push(input.value);
+            localStorage.setItem('items', JSON.stringify(itemsArray));
+            input.value = ''
+            try {
+                $textfild = localStorage.getItem($userPass);
+            } catch{ }
+            if ($textfild == 1) {
+                alert('Gucci');
+            } else {
+                localStorage.setItem($userPass, $textfild);
+                alert('Mane');
+            }
+        }*/
+        /*const input = document.getElementById('item');
+        let itemsArray = [];
+        localStorage.setItem('items', JSON.stringify(itemsArray));
+        const data = JSON.parse(localStorage.getItem('items'));
+        var a = document.querySelector('#inputIn');
+        a.onclick = function () {
+            var $textfild = document.querySelector('#item').value;
+            var $userPass = document.querySelector("#password").value;
+            itemsArray.push(input.value);
+            localStorage.setItem('items', JSON.stringify(itemsArray));
+            input.value = ''
+            try {
+                $textfild = localStorage.getItem($userPass);
+            } catch{ }
+            if ($textfild == 1) {
+                alert('Gucci');
+            } else {
+                localStorage.setItem($userPass, $textfild);
+                alert('Mane');
+            }
+        }*/
+        /*const input = document.getElementById('item');
+        let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+        localStorage.setItem('items', JSON.stringify(itemsArray));
+        function myFunction1() {
+            itemsArray.push(input.value);
+            localStorage.setItem('items', JSON.stringify(itemsArray));
+            input.value = ''
+        }*/
+
+
+    </script>
+    <!--div>
+        <p>The test() method returns true if it finds a match, otherwise it returns false.</p>
+        <p>Click the button to search a string for the character "e".</p>
+        </div>
+        <div>
+            <form>
+                <fieldset>
+                    <legend>Sing in</legend>
+                    <div>
+                        <input type='text' id="mail" required>
+                        <label for="mail">E-mail</label>
+                    </div>
+                    <div>
+                        <input type="password" id='password' required>
+                        <label for="password">Password</label>
+                    </div>
+                </fieldset>
+            </form>
+            <button>login</button>
+            <a href class="btn btn-danger" type="submit" role="button" id="blabla">ОТПРАВИТЬ</a>
+        </div>
+
+
+        <script>
+            blabla.onclick = function () {
+                //здесь обработка формы;
+                setTimeout('document.location.href="https://www.yandex.ru/";', 2000);
+                function myFunction() {
+                    var x;
+                    x = document.getElementById('item').value;
+                    let z = /([a-zA-Z0-9]+)([\.{1}])?([a-zA-Z0-9]+)\@gmail([\.])com$/g.test(x);
+                    if (!z) {
+                        //alert(" please enter to the gmail post");
+                        return false;
+                    }
+                    else {
+
+                    }
+                    let pswr = document.querySelector('#password').value;
+                    let test = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g.test(pswr);
+                    if (!test) {
+                        //alert("please enter to the gmail post");
+                        return false;
+                    }
+                    let phone = document.querySelector('#phone').value;
+                    let test2 = /(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/g.test(phone);
+                    if (!test2) {
+                        //alert("please enter to the gmail post");
+                        return false;
+                    }
+                }
+        </script>-->
+
+</body>
+
+</html>
