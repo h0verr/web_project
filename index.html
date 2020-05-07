@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--На каждую страницу-->
 <html>
 
 <head>
@@ -12,46 +11,10 @@
 </head>
 
 <body>
-	<style>
-		div.scrollup {
-			position: fixed;
-			/* фиксированная позиция */
-			color: #fff;
-			/* цвет текста */
-			background-color: #286090;
-			/* цвет заднего фона */
-			right: 20px;
-			/* расстояние от правого края */
-			bottom: 0px;
-			/* расстояние от нижнего края */
-			padding: 4px 10px;
-			/* отступы до содержимого блока */
-			font-size: 20px;
-			/* размер шрифта (иконки) */
-			border-top-left-radius: 4px;
-			/* скругление верхнего левого угла */
-			border-top-right-radius: 4px;
-			/* скругление верхнего правого угла */
-			cursor: pointer;
-			/* форма курсора */
-			display: none;
-			/* не отображать элемент */
-			text-align: center;
-			/*выравнивание содержимого элемента по центру */
-		}
-
-		div.scrollup:hover {
-			background-color: black;
-			/* цвет заднего фона при наведении */
-		}
-	</style>
 	<header>
-		<!--Верхняя строка шапки-->
 		<div class="row_header">
 			<div class="top_row">
-				<a href="index.html"><img class="logo"
-						src="https://i.pinimg.com/564x/da/82/08/da820870f7050f35111ddd85eb3a01f3.jpg"></a>
-				<!--Ссылка на index-->
+				<a href="index.html"><img class="logo" src="https://i.pinimg.com/564x/da/82/08/da820870f7050f35111ddd85eb3a01f3.jpg"></a>
 				<div class="top_links">
 					<nav>
 						<a class="link firsttop" href="html_pages/help.html"><i
@@ -60,8 +23,7 @@
 							cards</a>
 						<i class="fas fa-ellipsis-v link"></i>
 						<button class="link dialog_buttons" id='login'><i class="fas fa-user"></i>Sign in</button>
-						<button class="link dialog_buttons" id="updateDetails"><i class="fas fa-user-plus"></i>Sing
-							up</button>
+						<button class="link dialog_buttons" id="updateDetails"><i class="fas fa-user-plus"></i>Sing up</button>
 					</nav>
 				</div>
 			</div>
@@ -82,7 +44,92 @@
 		</div>
 	</header>
 	<main>
-		<div class="fixed">
+		<div style="height:95px; width: 100%;"></div>
+		<div class="slider">
+			<div class="sliders">
+				<input checked type="radio" name="r" id="r1">
+				<input type="radio" name="r" id="r2">
+				<input type="radio" name="r" id="r3">
+				<input type="radio" name="r" id="r4">
+			
+				<div id="slidegrid" class="slide s1">
+					<div id="img1" class="slide-item">
+						img1
+					</div>
+					<div id="img2" class="slide-item">
+						img2
+					</div>
+					<div id="top-text" class="slide-item">
+						top-text
+					</div>
+					<div id="middle-text" class="slide-item">
+						middle-text
+					</div>
+					<div id="bottom-text" class="slide-item">
+						bottom-text
+					</div>
+				</div>
+				<div id="slidegrid" class="slide s2">
+					<div id="img1" class="slide-item">
+						img1
+					</div>
+					<div id="img2" class="slide-item">
+						img2
+					</div>
+					<div id="top-text" class="slide-item">
+						top-text
+					</div>
+					<div id="middle-text" class="slide-item">
+						middle-text
+					</div>
+					<div id="bottom-text" class="slide-item">
+						bottom-text
+					</div>
+				</div>
+				<div id="slidegrid" class="slide s3">
+					<div id="img1" class="slide-item">
+						img1
+					</div>
+					<div id="img2" class="slide-item">
+						img2
+					</div>
+					<div id="top-text" class="slide-item">
+						top-text
+					</div>
+					<div id="middle-text" class="slide-item">
+						middle-text
+					</div>
+					<div id="bottom-text" class="slide-item">
+						bottom-text
+					</div>
+				</div>
+				<div id="slidegrid" class="slide s4">
+					<div id="img1" class="slide-item">
+						img1
+					</div>
+					<div id="img2" class="slide-item">
+						img2
+					</div>
+					<div id="top-text" class="slide-item">
+						top-text
+					</div>
+					<div id="middle-text" class="slide-item">
+						middle-text
+					</div>
+					<div id="bottom-text" class="slide-item">
+						bottom-text
+					</div>
+				</div>
+			</div>
+			<div class="navigation">
+				<label for="r1" class="bar"></label>
+				<label for="r2" class="bar"></label>
+				<label for="r3" class="bar"></label>
+				<label for="r4" class="bar"></label>
+			</div>
+			</div>
+			<div style="height:200px;"></div>
+				<div class="fixed">
 			<dialog class="dialog" id="favDialog">
 				<form method="dialog">
 					<div>
@@ -91,17 +138,18 @@
 								<div>
 									<img src="https://probrendi.ru/wp-content/uploads/2018/10/USPA-logo-a.png">
 								</div>
+								<div class="margin">
 								<div>
 									<input id="item" type="text" placeholder="Email Adress" required
 										title="PLease fill out this field. Use special symbols, big and small characters and numbers">
 									<label for="mail">E-mail</label>
 								</div>
-								<div>
+								<div class="margin">
 									<input type="password" id='password' placeholder="Password" data-rule="password"
 										required>
 									<label for="password">Password</label>
 								</div>
-								<div>
+								<div class="margin">
 									<input type="text" id="phone" placeholder="Phone number" data-rule="number"
 										required>
 									<label for="phone"> Phone number</label>
@@ -123,12 +171,13 @@
 								<div>
 									<img src="https://probrendi.ru/wp-content/uploads/2018/10/USPA-logo-a.png">
 								</div>
+								<div class="margin">
 								<div>
 									<input type='text' id="eMail" placeholder="Email Adress" data-rule="email" required
 										title="PLease fill out this field. Use special symbols, big and small characters and numbers">
 									<label for="eMail">E-mail</label>
 								</div>
-								<div>
+								<div class="margin">
 									<input type="password" id='password2' placeholder="Password" data-rule="password"
 										required>
 									<label for="password2">Password</label>
@@ -143,9 +192,8 @@
 				</form>
 			</dialog>
 		</div>
-		<script src="js files/script.js"></script>
-		<script src="js files/script2.js"></script>
-		<div style="height:500px;"></div>
+			<script src="js files/script.js"></script>
+			<script src="js files/script2.js"></script>
 	</main>
 	<footer>
 		<div class="footer-logo">
