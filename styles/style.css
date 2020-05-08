@@ -168,6 +168,7 @@ div.bottom_links ul li a:hover{
 	width: 100%;
 	height: 500px;
 	overflow: hidden;
+	margin-bottom: 130px;
 }
 #slidegrid{
 	display: grid;
@@ -274,7 +275,223 @@ input[name="r"]{
 #r4:checked ~ .s1{
 	margin-left: -75%;
 }
+/*-----------------------------------------------nav links in main-------------------------------*/
+.grid-links{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 400px 400px;
+	grid-gap: 50px; 
+	margin-left: 45px;
+	margin-right: 45px;
+	margin-bottom: 130px;
+}
+.link-page{
+	height: 400px;
+	width: 500px;
+}
+.link-page img{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+.link-page a button{
+	background-color: #051438;
+	color: white;
+	font-size: 15px;
+	font-weight: 600;
+	border-radius: 18px;
+	width: 120px;
+	height: 40px;
+	text-align: center;
+	line-height: 1.2em;
+	padding: 7px 10px;
+}
+.shop-men-btn{
+	position: absolute;
+	top: 250%;
+	left: 30%;
+}
+.shop-women-btn{
+	position: absolute;
+	top: 250%;
+	left: 80%;
+}
+.shop-kids-btn{
+	position: absolute;
+	top: 325%;
+	left: 30%;
+}
+.shop-bags-btn{
+	position: absolute;
+	top: 325%;
+	left: 80%;
+}
+.link-page img:hover+button{
+	color: #051438;
+	transition:all .5s ease;
+	background-color: white;
+	border: 1.5px solid lightgray;
+	transform: scale(1.07);
+}
+.link-page img:hover{
+	transition: all .5s ease;
+}
+.link-page button:hover{
+	color: #051438;
+	transition:all .5s ease;
+	background-color: white;
+	border: 1.5px solid lightgray;
+	transform: scale(1.07);
+	text-decoration: none;
+}
+/*--------------------------------------sale offer slider---------------------------------*/
+.sale-offer-slider{
+	margin-top: 40px;
+	margin-left: 45px;
+	overflow: hidden;
+}
+.offer-sliders{
+	width: 218.20%;
+	height: 100%;
+}
+.offer-sliders-grid{
+	display: grid;
+	grid-template-columns: 250px 250px 250px 250px  250px  250px  250px  250px  250px  250px  250px  250px ;
+	grid-template-rows: 250px 100px;
+	grid-column-gap: 30px;
+	grid-row-gap: 5px;
+	transition: 1.2s ;
+}
+.sale-offer-slide{
+	transition: all .6s ease;
+}
+.navigation-sale-offers{
+		margin-left:465px;
+		margin-right: 400px;
+		margin-bottom: 130px;
+		display: flex;
+}
+.nav-btn-sales{
+	height: 10px;
+	width: 10px;
+	margin: 4px;
+	background-color: lightgray;
+	border-radius: 50%;
+	transition: all .4s ease;
+	cursor: pointer;
+	opacity: .7;
+}
+.nav-btn-sales:hover{
+	transform: scale(1.07);
+	background-color: #5c5c5c;
+	opacity: 1;
 
+}
+
+input[name="g"]{
+	visibility: hidden;
+}
+#g1:checked ~ .offer-sliders-grid.s1{
+	margin-left: 0;
+}
+#g2:checked ~ .offer-sliders-grid.s1{
+	margin-left: -280px;
+}
+#g3:checked ~ .offer-sliders-grid.s1{
+	margin-left: -560px;
+}
+#g4:checked ~ .offer-sliders-grid.s1{
+	margin-left: -840px;
+}
+#g5:checked ~ .offer-sliders-grid.s1{
+	margin-left: -1120px;
+}
+#g6:checked ~ .offer-sliders-grid.s1{
+	margin-left: -1400px;
+}
+#g7:checked ~ .offer-sliders-grid.s1{
+	margin-left: -1680px;
+}
+#g8:checked ~ .offer-sliders-grid.s1{
+	margin-left: -1960px;
+}
+#g9:checked ~ .offer-sliders-grid.s1{
+	margin-left: -2240px;
+}
+.sale-imgs{
+	border-radius: 8px;
+	width: 100%;
+	height: 100%;
+}
+.sale{
+	background-color: #d60000;
+	color: white;
+	width: 60px;
+	font-size: 12px;
+	padding: 5px 7px;
+	border-radius: 8px;
+}	
+.sale-nav{
+	display:block;
+	margin-left: 2px 0;
+	text-decoration:none;
+	color: #051438;
+	margin-top: 4px;
+}	
+.sale-nav:hover{
+	text-decoration: underline;
+}
+.sale-price{
+	margin-top: 4px;
+	color: #d60000;
+}
+.price{
+	margin-top: 6px;
+	color: #9e9e9e;
+	text-decoration: line-through;
+}
+
+.elevated-comfort{
+	display: grid;
+	grid-template-columns: 1fr 1fr ;
+	grid-template-rows: 400px ;
+	margin-bottom: 90px;
+	margin-left: 45px;
+	margin-right: 45px;
+}
+h2.comfort{
+	font-size: 30px;
+}
+p.comfort{
+	font-size: 18px;
+	color: #b0b0b0;
+}
+img.elevated{
+	width: 100%;
+	height: 100%;
+
+}
+.elevated-btn{
+	text-decoration: none;
+	background-color: #051438;
+	color: white;
+	font-size: 15px;
+	font-weight: 600;
+	margin: 50px;
+	border-radius: 18px;
+	width: 140px;
+	height: 40px;
+	text-align: center;
+	line-height: 1.2em;
+	padding: 7px 13px;
+}
+.elevated-btn:hover{
+	text-decoration: none;
+	background: white;
+	color: #051438;
+	border: 2px solid lightgray;
+	transition: .6s;
+}
 /*------------------------------------------------------footer---------------------------------------------------------*/
 footer{
 	background-color:#f5f5f5;
