@@ -192,7 +192,8 @@
 					</div>
 					<menu>
 						<button class="dialogbtn" style="margin-left:150px" id="cancel2" type="reset">Cancel</button>
-						<button class="dialogbtn" type="submit" id="lS" onclick=" myFunction2(),save()">Confirm</button>
+						<button class="dialogbtn" type="submit" id="lS"
+							onclick=" myFunction2(),save(),FuncAdmin()">Confirm</button>
 					</menu>
 				</form>
 			</dialog>
@@ -332,6 +333,26 @@
 				return false;
 			}
 		};
+	</script>
+	<script>
+		function FuncAdmin() {
+			var a = {
+				email: 'user.up671@gmail.com',
+				password: 'LucidDreams1234!'
+			};
+			var b = document.querySelector('#email');
+			var c = document.querySelector('#password2');
+			if (b.value == a.email && c.value == a.password) {
+				alert('welcom');
+				document.location.href = "https://www.youtube.com"
+			} else {
+				alert('ne welcom');
+			}
+			console.log(a.email);
+			console.log(b.value);
+			console.log(c.value)
+			console.log(a.password);;
+		}
 	</script>
 </body>
 

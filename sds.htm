@@ -1,0 +1,104 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <input type="text" id="input">
+    <input type="text" id="password">
+    <input type="text" id="remove">
+    <button onclick="my()">Go</button>
+    <button onclick="my1()">as</button>
+    <script>
+        function my() {
+            var a = document.querySelector('#password');
+            var b = document.querySelector('#input');
+            localStorage.setItem(a.value, b.value);
+            console.log(a.value);
+        }
+        function my1() {
+            var c = document.querySelector('#remove');
+            localStorage.removeItem(c.value);
+        }
+    </script>
+</body>
+
+</html>-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>New Tab App</title>
+</head>
+
+<body>
+
+    <div class="small-container">
+        <h1>New Tab App</h1>
+
+        <form>
+            <input id="item" type="text" placeholder="пользователь">
+        </form>
+        <input type="text" id="push" placeholder="пароль">
+        <input type="text" id="removeM" placeholder="что удалить">
+        <h2>Items</h2>
+        <ul></ul>
+        <button id="SOVET">Go</button>
+        <button id="clear">Clear All</button>
+        <button id="remove" onclick="Paradise()">clear one</button>
+
+    </div>
+
+    <script>
+        var remove = document.getElementById('removeM');
+        const click = document.querySelector('#SOVET');
+        var pushes = document.getElementById('push');
+        const form = document.querySelector('form');
+        const ul = document.querySelector('ul');
+        const button = document.querySelector('#clear');
+        const input = document.getElementById('item');
+        let itemsArray = localStorage.getItem(pushes.value) ? JSON.parse(localStorage.getItem(pushes.value)) : [];
+
+        localStorage.setItem(pushes.value, JSON.stringify(itemsArray));
+        const data = JSON.parse(localStorage.getItem(pushes.value));
+
+        const liMaker = (text) => {
+            const li = document.createElement('li');
+            li.textContent = text;
+            ul.appendChild(li);
+        }
+
+        click.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            itemsArray.push(input.value);
+            localStorage.setItem(pushes.value, JSON.stringify(itemsArray));
+            liMaker(input.value);
+            input.value = "";
+        });
+        function Paradise() {
+            localStorage.removeItem(remove.value);
+        }
+        data.forEach(item => {
+            liMaker(item);
+        });
+
+        button.addEventListener('click', function () {
+            localStorage.clear();
+            while (ul.firstChild) {
+                ul.removeChild(ul.firstChild);
+            }
+            itemsArray = [];
+        });
+    </script>
+</body>
+
+</html>
