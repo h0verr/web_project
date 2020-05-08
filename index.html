@@ -14,7 +14,8 @@
 	<header>
 		<div class="row_header">
 			<div class="top_row">
-				<a href="index.html"><img class="logo" src="https://i.pinimg.com/564x/da/82/08/da820870f7050f35111ddd85eb3a01f3.jpg"></a>
+				<a href="index.html"><img class="logo"
+						src="https://i.pinimg.com/564x/da/82/08/da820870f7050f35111ddd85eb3a01f3.jpg"></a>
 				<div class="top_links">
 					<nav>
 						<a class="link firsttop" href="html_pages/help.html"><i
@@ -23,7 +24,8 @@
 							cards</a>
 						<i class="fas fa-ellipsis-v"></i>
 						<button class="link dialog_buttons" id='login'><i class="fas fa-user"></i>Sign in</button>
-						<button class="link dialog_buttons" id="updateDetails"><i class="fas fa-user-plus"></i>Sing up</button>
+						<button class="link dialog_buttons" id="updateDetails"><i class="fas fa-user-plus"></i>Sing
+							up</button>
 					</nav>
 				</div>
 			</div>
@@ -51,7 +53,7 @@
 				<input type="radio" name="r" id="r2">
 				<input type="radio" name="r" id="r3">
 				<input type="radio" name="r" id="r4">
-			
+
 				<div id="slidegrid" class="slide s1">
 					<div id="img1" class="slide-item">
 						<img src="img/home_page/img1.jpg">
@@ -66,7 +68,7 @@
 						<br>New collection<br>
 						"Shine"
 					</div>
-					<div  id="bottom-text" class="slide-item">
+					<div id="bottom-text" class="slide-item">
 						<br><a class="button" href="#">Discover the collection</a>
 					</div>
 				</div>
@@ -126,9 +128,9 @@
 				<label for="r3" class="bar"></label>
 				<label for="r4" class="bar"></label>
 			</div>
-			</div>
-			<div style="height:200px;"></div>
-				<div class="fixed">
+		</div>
+		<div style="height:200px;"></div>
+		<div class="fixed">
 			<dialog class="dialog" id="favDialog">
 				<form method="dialog">
 					<div>
@@ -138,27 +140,29 @@
 									<img src="https://probrendi.ru/wp-content/uploads/2018/10/USPA-logo-a.png">
 								</div>
 								<div class="margin">
-								<div>
-									<input id="item" type="text" placeholder="Email Adress" required
-										title="PLease fill out this field. Use special symbols, big and small characters and numbers">
-									<label for="mail">E-mail</label>
-								</div>
-								<div class="margin">
-									<input type="password" id='password' placeholder="Password" data-rule="password"
-										required>
-									<label for="password">Password</label>
-								</div>
-								<div class="margin">
-									<input type="text" id="phone" placeholder="Phone number" data-rule="number"
-										required>
-									<label for="phone"> Phone number</label>
+									<div>
+										<input id="item" type="text" placeholder="Email Adress" required
+											title="PLease fill out this field. Use special symbols, big and small characters and numbers">
+										<label for="mail">E-mail</label>
+									</div>
+									<div class="margin">
+										<input type="password" id='password' placeholder="Password" data-rule="password"
+											required>
+										<label for="password">Password</label>
+									</div>
+									<div class="margin">
+										<input type="text" id="phone" placeholder="Phone number" data-rule="number"
+											required>
+										<label for="phone"> Phone number</label>
+									</div>
 								</div>
 							</div>
 						</p>
 					</div>
 					<menu>
 						<button class="dialogbtn" style="margin-left:150px" id="cancel1" type="reset">Cancel</button>
-						<button class="dialogbtn" type="submit" id="lS" onclick=" myFunction()">Confirm</button>
+						<button class="dialogbtn" type="submit" id="lS"
+							onclick=" myFunction(),pushes()">Confirm</button>
 					</menu>
 				</form>
 			</dialog>
@@ -166,33 +170,34 @@
 				<form method="dialog">
 					<div>
 						<p>
-							<div id="regist">
+							<div id="favAnimal">
 								<div>
 									<img src="https://probrendi.ru/wp-content/uploads/2018/10/USPA-logo-a.png">
 								</div>
 								<div class="margin">
-								<div>
-									<input type='text' id="eMail" placeholder="Email Adress" data-rule="email" required
-										title="PLease fill out this field. Use special symbols, big and small characters and numbers">
-									<label for="eMail">E-mail</label>
-								</div>
-								<div class="margin">
-									<input type="password" id='password2' placeholder="Password" data-rule="password"
-										required>
-									<label for="password2">Password</label>
+									<div>
+										<input id="email" class="email" type="text" placeholder="Email Adress" required
+											title="PLease fill out this field. Use special symbols, big and small characters and numbers">
+										<label for="mail">E-mail</label>
+									</div>
+									<div class="margin">
+										<input type="password" id='password2' placeholder="Password"
+											data-rule="password" required>
+										<label for="password">Password</label>
+									</div>
 								</div>
 							</div>
 						</p>
 					</div>
 					<menu>
 						<button class="dialogbtn" style="margin-left:150px" id="cancel2" type="reset">Cancel</button>
-						<button class="dialogbtn" type="submit" id="loginIn" onclick=" singIn()">Confirm</button>
+						<button class="dialogbtn" type="submit" id="lS" onclick=" myFunction2(),save()">Confirm</button>
 					</menu>
 				</form>
 			</dialog>
 		</div>
-			<script src="js files/script.js"></script>
-			<script src="js files/script2.js"></script>
+		<script src="js files/script.js"></script>
+		<script src="js files/script2.js"></script>
 	</main>
 	<footer>
 		<div class="footer-logo">
@@ -285,7 +290,31 @@
 			}
 		});
 	</script>
-
+	<script>
+		const inputPush = document.getElementById('item');
+		var ar = document.getElementsByClassName('email');
+		let itemsArray = [];
+		localStorage.setItem('items', JSON.stringify(itemsArray));
+		function pushes() {
+			itemsArray.push(inputPush.value);
+			localStorage.setItem('items', JSON.stringify(itemsArray));
+			inputPush.value = "";
+			console.log(itemsArray);
+		}
+		function save() {
+			let up = [];
+			for (var i = 0; i < ar.length; i++) {
+				up[i] = ar[i].value;
+			}
+			console.log(up);
+			if (JSON.stringify(itemsArray) == JSON.stringify(up)) {
+				alert('Мал уже есть такой аккаунт');
+				return false;
+			} else {
+				alert('добро пожаловать мал');
+			}
+		}
+	</script>
 </body>
 
 </html>
