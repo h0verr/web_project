@@ -61,6 +61,7 @@ dialog.dialog img{
 	margin-left: 120px;
 }
 dialog.dialog{
+	transition: .4s;
 	border: 1px solid #0C0C3B;
 	border-radius: 15px;
 	box-shadow: 5px 5px 5px gray;
@@ -163,8 +164,75 @@ div.bottom_links ul li a:hover{
  .top_links a:hover, button:hover{
 	text-decoration: underline;
 }
-
 /*-----------------------------------------------main-----------------------------------------*/
+main{
+	color: #051438;;
+	padding: 0px 45px 50px  45px;
+}
+img.img{
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+}
+div.container{
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 280px 100px;
+	grid-column-gap: 30px;
+}
+.grid-item{
+
+}
+.price{
+	line-height: 1.4em;
+	cursor: default;
+	padding: 5px;
+
+}
+.size{
+	background-color:#f2f4f6;
+	cursor: pointer;
+	border: 1px solid #f5f5f5;
+	padding: 2px 5px;
+	border-radius: 8px;
+	display: block;
+}
+.size:hover{
+ 	background-color:#0d3f67;
+ 	color: white;
+ 	transform: scaleX(1.03);
+ 	transition: .3s;
+}
+.size:focus{
+ 	background-color:#0d3f67;
+ 	color: white;
+ 	transition: .3s;
+}
+.title{
+	font-weight: 550;
+	font-style: oblique;
+}
+.add{
+	background-color: #0d3f67;
+	color: white;
+	margin-top: 10px;
+	padding: 4px 13px;
+	text-decoration: none;
+	border-radius: 3px;
+
+}
+.add:hover{
+	transition: .3s;
+	text-decoration: underline;
+	transform: scale(1.04);
+}
+.add:active{
+	text-decoration: none;
+	transition: .1s;
+	transform: scaleX(1);
+
+}
 /*----------------------------------------------------footer--------------------------------*/
 footer{
 	background-color:#f5f5f5;
@@ -189,13 +257,6 @@ div.info a:hover{
 p.privacy{
 	color: #808080;
 }
-div.subscribe{
-	line-height: 2.8em;
-}
-p.subp{
-	color: #0C0C3B;
-	font-size: 20px;
-}
 .footer-logo{
 	background-color: #051438;
 	text-align: center;
@@ -208,29 +269,6 @@ p.subp{
 	padding-left:45px;
 	padding-right: 45px;  
 }
-footer input{
-	padding-left: 10px;
-	float:left;
-	box-sizing: border-box;
-	font-size: 22px;
-	width: 300px;
-	height: 40px;
-	box-shadow:1px 1px 5px lightgray;
-	border:0.4px solid white;
-	border-top-left-radius: 9px;
-	border-bottom-left-radius: 9px;
-}
-footer input:hover,input:focus {
-	border:0.9px solid #dbf1ff;
-}
-footer button{
-	width: 40px;
-	height: 40px;
-	background-color: lightgray;
-	border-top-right-radius: 9px;
-	border-bottom-right-radius: 9px;
-}
-
 /*sm*/
 div.sm a{
   margin: 0 10px;

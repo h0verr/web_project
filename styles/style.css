@@ -517,9 +517,6 @@ div.info a:hover{
 p.privacy{
 	color: #808080;
 }
-div.subscribe{
-	line-height: 2.8em;
-}
 p.subp{
 	color: #0C0C3B;
 	font-size: 20px;
@@ -536,29 +533,6 @@ p.subp{
 	padding-left:45px;
 	padding-right: 45px;  
 }
-footer input{
-	padding-left: 10px;
-	float:left;
-	box-sizing: border-box;
-	font-size: 22px;
-	width: 300px;
-	height: 40px;
-	box-shadow:1px 1px 5px lightgray;
-	border:0.4px solid white;
-	border-top-left-radius: 9px;
-	border-bottom-left-radius: 9px;
-}
-footer input:hover,input:focus {
-	border:0.9px solid #dbf1ff;
-}
-footer button{
-	width: 40px;
-	height: 40px;
-	background-color: lightgray;
-	border-top-right-radius: 9px;
-	border-bottom-right-radius: 9px;
-}
-
 /*sm*/
 div.sm a{
   margin: 0 10px;
