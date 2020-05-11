@@ -3,6 +3,9 @@
 	margin: 0;
 	border: 0;
 }
+body{
+	font-family: "Libre Caslon Text";
+}
 *,*:before,*:after{
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -40,9 +43,7 @@ h3{
 /*font-family: "Lato", sans-serif; - Шапка и заголовки*/
 /*font-family: "Libre Caslon Text", serif; - контент*/
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Libre+Caslon+Text&display=swap');
-body{
-	font-family: "Libre Caslon Text";
-}
+
 .top_links{float: right;}
 .clear{clear: both;}
 header{
@@ -235,6 +236,8 @@ div.container{
 	transform: scaleX(1);
 
 }
+
+
 
 
 /*----------------------------------------------------footer--------------------------------*/

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>uspoloa-kids</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles/kids.css">
+	<script src="https://kit.fontawesome.com/2d89f7dc6b.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="row_header">
+			<div class="top_row">
+				<a href="index.html"><img class="logo"
+						src="https://i.pinimg.com/564x/da/82/08/da820870f7050f35111ddd85eb3a01f3.jpg"></a>
+				<div class="top_links">
+					<nav>
+						<a class="link firsttop" href="help.html"><i
+								class="far fa-question-circle"></i>Help</a>
+						<a class="link" href="gifts.html"><i class="fas fa-hand-holding-usd"></i>Gift
+							cards</a>
+						<i class="fas fa-ellipsis-v"></i>
+						<button class="link dialog_buttons" id='login'><i class="fas fa-user"></i>Sign in</button>
+						<button class="link dialog_buttons" id="updateDetails"><i class="fas fa-user-plus"></i>Sing up</button>
+					</nav>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<!--Нижняя строка шапки-->
+			<div class="bottom_row">
+				<div class="bottom_links">
+					<nav>
+						<ul>
+							<li><a class="link" href="men.html">Men</a></li>
+							<li><a class="link" href="women.html">Women</a></li>
+							<li><a class="link" href="kids.html">Kids</a></li>
+							<li><a class="link" href="accessories.html">accessories</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div style="height: 95px;width: 100%;"></div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="grid-item"><img class="img" src="img/kids/kids (1).jpg"></div>
+			<div class="grid-item"><img class="img" src="img/kids/kids (2).jpg"></div>
+			<div class="grid-item"><img class="img" src="img/kids/kids (3).jpg"></div>
+			<div class="grid-item"><img class="img" src="img/kids/kids (9).jpg"></div>
+			<div class="item_box price">
+				<p class="item_title title">Dark-blue Boy's T-shirt</p>
+				<p>$<span class="item_price">30.90</span></p>
+				<select class="size">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="s">S</option>
+				</select>
+				<button data-id="29" class="add_item add">Add to me</button>
+			</div>
+			<div class="item_box price">
+				<p class="item_title title">Datk-blue Boy's Sweatshirt</p>
+				<p>$<span class="item_price">40.50</span></p>
+				<select class="size">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="s">S</option>
+				</select>
+				<button data-id="30" class="add_item add">Add to me</button>
+
+			</div>
+			<div class="item_box price">
+				<p class="item_title title">Blue/White Girl's Sweatshirt</p>
+				<p>$<span class="item_price">60.10</span></p>
+				<select class="size">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="s">S</option>
+				</select>
+				<button data-id="31" class="add_item add">Add to me</button>
+			</div>
+			<div class="item_box price">
+				<p class="item_title title">Light-Blue Boy's Shirt</p>
+				<p>$<span class="item_price">49.00</span></p>
+				<select class="size">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="s">S</option>
+				</select>
+				<button data-id="32" class="add_item add">Add to me</button>
+			</div>
+		</div>
+		<div class="container">
+			<div class="grid-item"><img class="img" src="img/kids/kids (5).jpg"></div>
+			<div class="grid-item"><img class="img" src="img/kids/kids (6).jpg"></div>
+			<div class="grid-item"><img class="img" src="img/kids/kids (7).jpg"></div>
+			<div class="grid-item"><img class="img" src="img/kids/kids (8).jpg"></div>
+			<div class="item_box price">
+				<p class="item_title title">White Girl's Sweatshirt</p>
+				<p>$<span class="item_price">45.99</span></p>
+				<select class="size">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="s">S</option>
+				</select>
+				<button data-id="33" class="add_item add">Add to me</button>
+			</div>
+			<div class="item_box price">
+				<p class="item_title title">Gray Boy's Sweatshirt</p>
+				<p>$<span class="item_price">40.00</span></p>
+				<select class="size">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="s">S</option>
+				</select>
+				<button data-id="34" class="add_item add">Add to me</button>
+
+			</div>
+			<div class="item_box price">
+				<p class="item_title title">Blue/Yellow/Orange Boy's Polos</p>
+				<p>$<span class="item_price">40.10</span></p>
+				<select class="size">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="s">S</option>
+				</select>
+				<button  data-id="35" class="add_item add">Add to me</button>
+			</div>
+			<div class="item_box price">
+				<p class="item_title title">Yellow Boy's T-shirt</p>
+				<p>$<span class="item_price">35.00</span></p>
+				<select class="size">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="s">S</option>
+				</select>
+				<button data-id="36" class="add_item add">Add to me</button>
+			</div>
+		</div>
+		<div class="fixed">
+			<dialog class="dialog" id="favDialog">
+				<form method="dialog">
+					<div>
+						<p>
+						<div id="favAnimal">
+							<div>
+								<img src="https://probrendi.ru/wp-content/uploads/2018/10/USPA-logo-a.png">
+							</div>
+							<div class="margin">
+								<div class="margin">
+									<input id="item" type="text" placeholder="Email Adress" required
+										title="PLease fill out this field. Use special symbols, big and small characters and numbers">
+									<label for="mail">E-mail</label>
+								</div>
+								<div class="margin">
+									<input type="password" id='password' placeholder="Password" data-rule="password"
+										required>
+									<label for="password">Password</label>
+								</div>
+								<div class="margin">
+									<input type="text" id="phone" placeholder="Phone number" data-rule="number"
+										required>
+									<label for="phone"> Phone number</label>
+								</div>
+							</div>
+						</div>
+						</p>
+					</div>
+					<menu>
+						<button class="dialogbtn" style="margin-left:150px" id="cancel1" type="reset">Cancel</button>
+						<button class="dialogbtn" type="submit" id="lS"
+							onclick=" myFunction(),pushes()">Confirm</button>
+					</menu>
+				</form>
+			</dialog>
+		</div>
+		<div class="fixed">
+			<dialog class="dialog" id="loginIn">
+				<form method="dialog">
+					<div>
+						<p>
+						<div id="favAnimal">
+							<div>
+								<img src="https://probrendi.ru/wp-content/uploads/2018/10/USPA-logo-a.png">
+							</div>
+							<div class="margin">
+								<div class="margin">
+									<input id="email" class="email" type="text" placeholder="Email Adress" required
+										title="PLease fill out this field. Use special symbols, big and small characters and numbers">
+									<label for="mail">E-mail</label>
+								</div>
+								<div class="margin">
+									<input type="password" id='password2' placeholder="Password" data-rule="password"
+										required class="password2">
+									<label for="password">Password</label>
+								</div>
+							</div>
+						</div>
+						</p>
+					</div>
+					<menu>
+						<button class="dialogbtn" style="margin-left:150px" id="cancel2" type="reset">Cancel</button>
+						<button class="dialogbtn" type="submit" id="lS" onclick=" myFunction2(),save()">Confirm</button>
+					</menu>
+				</form>
+			</dialog>
+		</div>
+
+			<script src="js files/script.js"></script>
+			<script src="js files/script2.js"></script>
+	</main>
+	<footer>
+		<div class="footer-logo">
+			<img src="https://cdn.shopify.com/s/files/1/0014/6217/3742/files/uspoloassn-logo-white-1000x260.png?15245">
+		</div>
+		<div class="footer-container">
+			<div class="grid-footer-itm">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aabb98a1a6329c94e7c298e0ca9aa59d9b4aa5059d30f5b656ebffe53535f9afa&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+			</div>
+			<div id="griditm1" class="info grid-footer-itm">
+				<nav>
+					<p class="info">QUICK LINKS</p>
+					<a href="#">Returns & Exchanges</a><br>
+					<a href="#">Track Order</a><br>
+					<a href="#">Payments Accepted</a><br>
+					<a href="#">Find a Store</a><br>
+					<a href="#">Student Discount</a><br>
+					<a href="#">Affiliate Program</a><br>
+					<a href="#">Military Discount</a><br>
+					<a href="#">U.S. Polo Assn. Promo Codes</a><br>
+					<a href="#">Teacher Discount</a><br>
+				</nav>
+			</div>
+			<div id="griditm2" class="info grid-footer-itm">
+				<nav>
+					<p class="info">SUPPORT</p>
+					<a href="#">Help</a><br>
+					<a href="#">Contact</a><br>
+					<a href="#">Feedback</a><br>
+					<a href="#">Unsubscribe</a><br>
+				</nav>
+			</div>
+			<div id="griditm3" class="info grid-footer-itm">
+				<nav>
+					<p class="info">COMPANY</p>
+					<a href="#">About us</a><br>
+					<a href="#">Careers </a><br>
+					<a href="#">Privacy Policy</a><br>
+					<a href="#">Terms of Use</a><br>
+					<a href="#">CA Do Not Sell My Info</a><br>
+					<a href="#">Our Values</a><br>
+					<a href="#">Events </a><br>
+				</nav>
+			</div>
+			<div class="sm grid-footer-itm">
+				<a href="https://twitter.com/uspoloassn"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.instagram.com/uspoloassnusa/?hl=ru"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.pinterest.com/uspoloassn/"><i class="fab fa-pinterest"></i></a>
+				<a href="https://vk.com/uspoloassnrus"><i class="fab fa-vk"></i></a>
+				<a href="https://www.youtube.com/channel/UCrMj4Qbt3wKweAgVI-DMoww"><i class="fab fa-youtube"></i></a>
+				<a href="https://www.facebook.com/uspoloassn/"><i class="fab fa-facebook-f"></i></a>
+				<p class="privacy">©2020 U.S. POLO ASSN. All copyrights reserved</p>
+			</div>
+		</div>
+	</footer>
+	<div class="scrollup">
+		<!-- Иконка fa-chevron-up (Font Awesome) -->
+		<i class="fa fa-chevron-up"></i>
+	</div>
+	<script>
+		$(function () {
+			// при нажатии на кнопку scrollup
+			$('.scrollup').click(function () {
+				// переместиться в верхнюю часть страницы
+				$("html, body").animate({
+					scrollTop: 0
+				}, 1000);
+			})
+		})
+		// при прокрутке окна (window)
+		$(window).scroll(function () {
+			// если пользователь прокрутил страницу более чем на 200px
+			if ($(this).scrollTop() > 200) {
+				// то сделать кнопку scrollup видимой
+				$('.scrollup').fadeIn();
+			}
+			// иначе скрыть кнопку scrollup
+			else {
+				$('.scrollup').fadeOut();
+			}
+		});
+	</script>
+	<script>
+		const inputPush1 = document.getElementById('password');
+		var ar1 = document.getElementsByClassName('password2');
+		var ar = document.getElementsByClassName('email');
+		const inputPush = document.getElementById('item');
+		let itemsArray = localStorage.getItem('email') ? JSON.parse(localStorage.getItem('email')) : [];
+		let itemsArray1 = [];
+		function pushes1() {
+			itemsArray.push(inputPush.value);
+			localStorage.setItem('email', JSON.stringify(itemsArray));
+			inputPush.value = "";
+			console.log(itemsArray);
+		}
+		function pushes() {
+			itemsArray1.push(inputPush1.value);
+			localStorage.setItem('password', JSON.stringify(itemsArray1));
+			inputPush1.value = "";
+			console.log(itemsArray1);
+			pushes1();
+		}
+		function save() {
+			let up1 = [];
+			for (var j = 0; j < ar1.length; j++) {
+				up1[j] = ar1[j].value;
+			};
+			let up = [];
+			for (var i = 0; i < ar.length; i++) {
+				up[i] = ar[i].value;
+			};
+			console.log(up1);
+			console.log(up);
+
+			if (_.isEqual(itemsArray, up) && _.isEqual(itemsArray, up)) {
+				alert('Добро пожаловать');
+				return false;
+			}
+			else {
+				alert("Неправильный пароль");
+				return false;
+			}
+		};
+	</script>
+</body>
+</html>

@@ -40,7 +40,9 @@ h3{
 /*font-family: "Lato", sans-serif; - Шапка и заголовки*/
 /*font-family: "Libre Caslon Text", serif; - контент*/
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Libre+Caslon+Text&display=swap');
-
+body{
+	font-family: "Libre Caslon Text";
+}
 .top_links{float: right;}
 .clear{clear: both;}
 header{
