@@ -302,8 +302,7 @@
 					</div>
 					<menu>
 						<button class="dialogbtn" style="margin-left:150px" id="cancel1" type="reset">Cancel</button>
-						<button class="dialogbtn" type="submit" id="lS"
-							onclick=" myFunction(),pushes()">Confirm</button>
+						<button class="dialogbtn" type="submit" id="button1" onclick=" myFunction()">Confirm</button>
 					</menu>
 				</form>
 			</dialog>
@@ -334,15 +333,16 @@
 					</div>
 					<menu>
 						<button class="dialogbtn" style="margin-left:150px" id="cancel2" type="reset">Cancel</button>
-						<button class="dialogbtn" type="submit" id="lS"
+						<button class="dialogbtn" type="submit" id="button2"
 							onclick=" myFunction2(),save(),FuncAdmin()">Confirm</button>
 					</menu>
 				</form>
 			</dialog>
 		</div>
-
 		<script src="js files/script.js"></script>
 		<script src="js files/script2.js"></script>
+		<script src="js files/admin_sing_in.js"></script>
+		<script src="js files/registration_part_2.js"></script>
 	</main>
 	<footer>
 		<div class="footer-logo">
@@ -350,7 +350,8 @@
 		</div>
 		<div class="footer-container">
 			<div class="grid-footer-itm">
-				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aabb98a1a6329c94e7c298e0ca9aa59d9b4aa5059d30f5b656ebffe53535f9afa&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+				<script type="text/javascript" charset="utf-8" async
+					src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aabb98a1a6329c94e7c298e0ca9aa59d9b4aa5059d30f5b656ebffe53535f9afa&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
 			</div>
 
 			<div id="griditm1" class="info grid-footer-itm">
@@ -425,68 +426,6 @@
 				$('.scrollup').fadeOut();
 			}
 		});
-	</script>
-	<script>
-		const inputPush1 = document.getElementById('password');
-		var ar1 = document.getElementsByClassName('password2');
-		var ar = document.getElementsByClassName('email');
-		const inputPush = document.getElementById('item');
-		let itemsArray = localStorage.getItem('email') ? JSON.parse(localStorage.getItem('email')) : [];
-		let itemsArray1 = [];
-		function pushes1() {
-			itemsArray.push(inputPush.value);
-			localStorage.setItem('email', JSON.stringify(itemsArray));
-			inputPush.value = "";
-			console.log(itemsArray);
-		}
-		function pushes() {
-			itemsArray1.push(inputPush1.value);
-			localStorage.setItem('password', JSON.stringify(itemsArray1));
-			inputPush1.value = "";
-			console.log(itemsArray1);
-			pushes1();
-		}
-		function save() {
-			let up1 = [];
-			for (var j = 0; j < ar1.length; j++) {
-				up1[j] = ar1[j].value;
-			};
-			let up = [];
-			for (var i = 0; i < ar.length; i++) {
-				up[i] = ar[i].value;
-			};
-			console.log(up1);
-			console.log(up);
-
-			if (_.isEqual(itemsArray, up) && _.isEqual(itemsArray, up)) {
-				alert('Добро пожаловать');
-				return false;
-			}
-			else {
-				alert("Неправильный пароль");
-				return false;
-			}
-		};
-	</script>
-	<script>
-		function FuncAdmin() {
-			var a = {
-				email: 'user.up671@gmail.com',
-				password: 'LucidDreams1234!'
-			};
-			var b = document.querySelector('#email');
-			var c = document.querySelector('#password2');
-			if (b.value == a.email && c.value == a.password) {
-				alert('welcom');
-				document.location.href = "https://www.youtube.com"
-			} else {
-				alert('ne welcom');
-			}
-			console.log(a.email);
-			console.log(b.value);
-			console.log(c.value)
-			console.log(a.password);;
-		}
 	</script>
 </body>
 
