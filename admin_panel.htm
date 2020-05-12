@@ -10,94 +10,28 @@
 
 <body>
 
+    <button onclick="loginOut()">Login out</button>
     <div class="small-container">
         <h1>New Tab App</h1>
-
-        <form>
-            <input id="item" type="text" placeholder="пользователь">
-        </form>
-        <input type="text" id="push" placeholder="пароль">
-        <br>
-        <input type="text" id="remove" placeholder="что удалить">
+        <input id="emailUser" type="text" placeholder="пользователь">
+        <input type="text" id="passwordUser" placeholder="пароль">
         <br>
         <input type="text" id="ban" placeholder="Ban">
-        <br>
         <input type="text" id="razban" placeholder="Razban">
         <br>
-        <input type="text" id="test">
-        <h2>Items</h2>
-        <ul></ul>
+        <input type="text" id="remove" placeholder="что удалить">
+        <input type="text" id="test" placeholder="test">
+        <br>
         <button id="SOVET" onclick="addItem()">Go</button>
         <button id="clear" onclick="remove()">Clear All</button>
         <button id="remove" onclick="Paradise()">clear one</button>
         <button onclick="rise()" id="rise">Ban</button>
-        <button onclick="razbanen()">click</button>
+        <button onclick="razbanen()">Razban</button>
         <button onclick="test()">TEST</button>
 
     </div>
 
-    <script>
-        var ban = document.querySelector('#ban');
-        var razban = document.querySelector('#razban');
-        var removeUser = document.getElementById('remove');
-        var pushes = document.getElementById('item');
-        const form = document.querySelector('form');
-        const ul = document.querySelector('ul');
-        const inputEmail = document.getElementById('push');
-        let itemsArray = localStorage.getItem(pushes.value) ? JSON.parse(localStorage.getItem(pushes.value)) : [];
-        localStorage.setItem(pushes.value, JSON.stringify(itemsArray));
-        const data = JSON.parse(localStorage.getItem(pushes.value));
-        const liMaker = (text) => {
-            const li = document.createElement('li');
-            li.textContent = text;
-            ul.appendChild(li);
-        }
-        form.addEventListener('submit', function (e) {
-            e.preventDefault()
-        })
-        function addItem() {
-            itemsArray.push(inputEmail.value);
-            localStorage.setItem(pushes.value, JSON.stringify(itemsArray));
-            liMaker(inputEmail.value);
-            inputEmail.value = "";
-            pushes.value = ""
-        };
-        function Paradise() {
-            localStorage.removeItem(removeUser.value);
-            removeUser = '';
-        }
-        data.forEach(item => {
-            liMaker(item);
-        });
-        function remove() {
-            localStorage.clear();
-            while (ul.firstChild) {
-                ul.removeChild(ul.firstChild);
-            }
-            itemsArray = [];
-        };
-        var ab, as;
-        function rise() {
-            ab = localStorage.setItem('onban', ban.value);
-            console.log(localStorage.onban);
-
-        }
-        function razbanen() {
-            localStorage.removeItem('onban');
-            console.log(window.localStorage);
-        }
-        function test() {
-            var a = document.querySelector("#test").value;
-            if (_.isEqual(a, localStorage.onban)) {
-                window.location.replace('404.html');
-                console.log(a);
-                console.log(localStorage.onban);
-            }
-            else {
-                alert('ne polychilos');
-            }
-        }
-    </script>
+    <script src="js files/admin_panel.js"></script>
 </body>
 
 </html>

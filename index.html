@@ -341,6 +341,8 @@
 		</div>
 		<script src="js files/script.js"></script>
 		<script src="js files/script2.js"></script>
+		<script src="js files/admin_sing_in.js"></script>
+		<script src="js files/registration_part_2.js"></script>
 	</main>
 	<footer>
 		<div class="footer-logo">
@@ -424,63 +426,6 @@
 				$('.scrollup').fadeOut();
 			}
 		});
-	</script>
-	<script>
-		function FuncAdmin() {
-			var a = {
-				email: 'user.up671@gmail.com',
-				password: 'LucidDreams1234!'
-			};
-			var b = document.querySelector('#email');
-			var c = document.querySelector('#password2');
-			if (b.value == a.email && c.value == a.password) {
-				alert('welcom');
-				window.location.replace('admin_panel.htm');
-			}
-			console.log(a.email);
-			console.log(b.value);
-			console.log(c.value)
-			console.log(a.password);;
-		}
-	</script>
-	<script>
-		var button1 = document.getElementById("button1");
-		const inputPush1 = document.getElementById('password');
-		var ar1 = document.getElementsByClassName('password2');
-		var ar = document.getElementsByClassName('email');
-		const inputPush = document.getElementById('item');
-		let itemsArray = localStorage.getItem('email') ? JSON.parse(localStorage.getItem('email')) : [];
-		let itemsArray1 = [];
-		function pushes1() {
-			itemsArray.push(inputPush.value);
-			localStorage.setItem('email', JSON.stringify(itemsArray));
-			inputPush.value = "";
-			console.log(itemsArray);
-		}
-		button1.onclick = function () {
-			itemsArray1.push(inputPush1.value);
-			localStorage.setItem('password', JSON.stringify(itemsArray1));
-			inputPush1.value = "";
-			console.log(itemsArray1);
-			pushes1();
-		}
-		function save() {
-			let up1 = [];
-			for (var j = 0; j < ar1.length; j++) {
-				up1[j] = ar1[j].value;
-			};
-			let up = [];
-			for (var i = 0; i < ar.length; i++) {
-				up[i] = ar[i].value;
-			};
-			console.log(up1);
-			console.log(up);
-
-			if (_.isEqual(itemsArray, up) && _.isEqual(itemsArray, up)) {
-				alert('Добро пожаловать');
-				return false;
-			}
-		};
 	</script>
 </body>
 
