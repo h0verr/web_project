@@ -1,8 +1,8 @@
-var button1 = document.getElementById("button1");
 const inputPush1 = document.getElementById('password');
 var ar1 = document.getElementsByClassName('password2');
 var ar = document.getElementsByClassName('email');
 const inputPush = document.getElementById('item');
+var phone = document.getElementById('phone')
 let itemsArray = localStorage.getItem('email') ? JSON.parse(localStorage.getItem('email')) : [];
 let itemsArray1 = [];
 function pushes1() {
@@ -11,10 +11,11 @@ function pushes1() {
     inputPush.value = "";
     console.log(itemsArray);
 }
-button1.onclick = function () {
+function pushes() {
     itemsArray1.push(inputPush1.value);
     localStorage.setItem('password', JSON.stringify(itemsArray1));
     inputPush1.value = "";
+    phone.value = '';
     console.log(itemsArray1);
     pushes1();
 }
@@ -32,6 +33,7 @@ function save() {
 
     if (_.isEqual(itemsArray, up) && _.isEqual(itemsArray, up)) {
         alert('Добро пожаловать');
+        window.location.replace('source/index.html');
         return false;
     }
 };

@@ -1,7 +1,7 @@
 function FuncAdmin() {
     var a = {
-        email: 'user.up671@gmail.com',
-        password: 'LucidDreams1234!'
+        email: 'admin@gmail.com',
+        password: 'Admin123!'
     };
     var b = document.querySelector('#email');
     var c = document.querySelector('#password2');

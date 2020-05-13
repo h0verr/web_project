@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>uspoloassn-gift-cards</title>
 	<meta charset="utf-8">
@@ -9,21 +10,23 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
 </head>
+
 <body>
 	<header>
 		<div class="row_header">
 			<div class="top_row">
-				<a href="index.html"><img class="logo" src="https://i.pinimg.com/564x/da/82/08/da820870f7050f35111ddd85eb3a01f3.jpg"></a>
+				<a href="index.html"><img class="logo"
+						src="https://i.pinimg.com/564x/da/82/08/da820870f7050f35111ddd85eb3a01f3.jpg"></a>
 				<a href="index.html"><img class="logo_adap" src="img/home_page/logo_adap.png"></a>
 				<div class="top_links">
 					<nav>
-						<a class="link firsttop" href="help.html"><i
-								class="far fa-question-circle"></i>Help</a>
+						<a class="link firsttop" href="help.html"><i class="far fa-question-circle"></i>Help</a>
 						<a class="link" href="gifts.html"><i class="fas fa-hand-holding-usd"></i>Gift
 							cards</a>
 						<i class="fas fa-ellipsis-v"></i>
 						<button class="link dialog_buttons" id='login'><i class="fas fa-user"></i>Sign in</button>
-						<button class="link dialog_buttons" id="updateDetails"><i class="fas fa-user-plus"></i>Sing up</button>
+						<button class="link dialog_buttons" id="updateDetails"><i class="fas fa-user-plus"></i>Sing
+							up</button>
 					</nav>
 				</div>
 			</div>
@@ -49,14 +52,14 @@
 			<h1>U.S.Polo Assn's Gift Cards</h1>
 			<div class="container">
 				<div class="grid-item">
-				<h2>Egifts Cards</h2>
-				<p>Add a personalized message. We'll deliver your gift via email.</p>
-				<button class="shop-card">Shop egift card</button>
+					<h2>Egifts Cards</h2>
+					<p>Add a personalized message. We'll deliver your gift via email.</p>
+					<button class="shop-card">Shop egift card</button>
 				</div>
 				<div class="grid-item">
-				<h2>Gifts Cards</h2>
-				<p>Pick one out and w'll mail it to the lucky recipient.</p>
-				<button class="shop-card">Shop gift card</button>
+					<h2>Gifts Cards</h2>
+					<p>Pick one out and w'll mail it to the lucky recipient.</p>
+					<button class="shop-card">Shop gift card</button>
 				</div>
 				<div class="third">
 					<p>CHECK GIFT CARD BALANCE</p>
@@ -131,14 +134,17 @@
 					</div>
 					<menu>
 						<button class="dialogbtn" style="margin-left:150px" id="cancel2" type="reset">Cancel</button>
-						<button class="dialogbtn" type="submit" id="lS" onclick=" myFunction2(),save()">Confirm</button>
+						<button class="dialogbtn" type="submit" id="lS"
+							onclick=" myFunction2(),save(),FuncAdmin(),test()">Confirm</button>
 					</menu>
 				</form>
 			</dialog>
 		</div>
-
-			<script src="js files/script.js"></script>
-			<script src="js files/script2.js"></script>
+		<script src="js files/script.js"></script>
+		<script src="js files/script2.js"></script>
+		<script src="js files/admin_sing_in.js"></script>
+		<script src="js files/registration_part_2.js"></script>
+		<script src="js files/admin_panel.js"></script>
 	</main>
 	<footer>
 		<div class="footer-logo">
@@ -146,7 +152,8 @@
 		</div>
 		<div class="footer-container">
 			<div id="griditm0" class="grid-footer-itm">
-				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aabb98a1a6329c94e7c298e0ca9aa59d9b4aa5059d30f5b656ebffe53535f9afa&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+				<script type="text/javascript" charset="utf-8" async
+					src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aabb98a1a6329c94e7c298e0ca9aa59d9b4aa5059d30f5b656ebffe53535f9afa&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
 			</div>
 
 			<div id="griditm1" class="info grid-footer-itm">
@@ -231,47 +238,6 @@
 			}
 		});
 	</script>
-	<script>
-		const inputPush1 = document.getElementById('password');
-		var ar1 = document.getElementsByClassName('password2');
-		var ar = document.getElementsByClassName('email');
-		const inputPush = document.getElementById('item');
-		let itemsArray = localStorage.getItem('email') ? JSON.parse(localStorage.getItem('email')) : [];
-		let itemsArray1 = [];
-		function pushes1() {
-			itemsArray.push(inputPush.value);
-			localStorage.setItem('email', JSON.stringify(itemsArray));
-			inputPush.value = "";
-			console.log(itemsArray);
-		}
-		function pushes() {
-			itemsArray1.push(inputPush1.value);
-			localStorage.setItem('password', JSON.stringify(itemsArray1));
-			inputPush1.value = "";
-			console.log(itemsArray1);
-			pushes1();
-		}
-		function save() {
-			let up1 = [];
-			for (var j = 0; j < ar1.length; j++) {
-				up1[j] = ar1[j].value;
-			};
-			let up = [];
-			for (var i = 0; i < ar.length; i++) {
-				up[i] = ar[i].value;
-			};
-			console.log(up1);
-			console.log(up);
-
-			if (_.isEqual(itemsArray, up) && _.isEqual(itemsArray, up)) {
-				alert('Добро пожаловать');
-				return false;
-			}
-			else {
-				alert("Неправильный пароль");
-				return false;
-			}
-		};
-	</script>
 </body>
+
 </html>
